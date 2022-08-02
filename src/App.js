@@ -1,18 +1,17 @@
 import React, {Component} from 'react';
-import './App.css';
+import './styles/App.css';
+import Header from './components/Header';
 
 class App extends Component {
-  constructor() {
-    super()
-  }
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <div>CV Builder</div>
-        </header>
-      </div>
+    //   <div className="App">
+    //     <header className="App-header">
+    //       <div>CV Builder</div>
+    //     </header>
+    //   </div>
+    <Header />
     );
   }
 
