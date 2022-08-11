@@ -1,31 +1,51 @@
-import { render } from "@testing-library/react";
-import React, {Component} from "react";
+import React from 'react';
 
-class Experience extends Component() {
-    // constructor() {
-    //     super()
-    // }
+function Experience() {
+  return (
+    <section className="expInfo">
+      <h2>Experience</h2>
+      <div className="infoFields">
+        <label htmlFor="companyInput" />
+        <input
+          id="companyInput"
+          className="firstCol firstRow"
+          placeholder="Company Name"
+        />
 
-        render() {
-            return(
-                <div>
-                    <label htmlFor="companyInput"></label>
-                    <input id="companyInput"></input>
+        <label htmlFor="positionInput" />
+        <input
+          id="positonInput"
+          className="secondCol firstRow"
+          placeholder="Position"
+        />
 
-                    <label htmlFor="positionInput"></label>
-                    <input id="positonInput"></input>
+        <label htmlFor="expStartDate" />
+        <input
+          id="expStartDate"
+          className="firstCol secondRow"
+          placeholder="Start Date"
+        />
 
-                    <label htmlFor="expStartDate"></label>
-                    <input id="expStartDate"></input>
+        <label htmlFor="expEndDate" />
+        <input
+          id="expEndDate"
+          className="secondCol secondRow"
+          placeholder="End Date"
+        />
 
-                    <label htmlFor="expEndDate"></label>
-                    <input id="expEndDate"></input>
-
-                    <label htmlFor="jobDescription"></label>
-                    <input id="jobDescription"></input>
-                </div>
-            )
-        }
+        <label htmlFor="jobDescription" />
+        <textarea
+          id="jobDescription"
+          className="bothCol thirdRow"
+          placeholder="Job Description"
+        />
+      </div>
+      <div className="formButtons">
+        <button className="add">Add Experience</button>
+        <button className="delete">Delete</button>
+      </div>
+    </section>
+  );
 }
 
-export default Experience
+export default Experience;
