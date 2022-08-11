@@ -4,7 +4,7 @@ import '../styles/App.css'
 const Header = () => {
         return(
             <header className='header'>
-                <div>CV Builder</div>
+                <h1>CV Builder</h1>
             </header>
         )
 } 
