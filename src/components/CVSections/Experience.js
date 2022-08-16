@@ -1,50 +1,48 @@
 import React from 'react';
 
-function Experience() {
+function Experience(props) {
   return (
-    <section className="expInfo">
-      <h2>Experience</h2>
-      <div className="infoFields">
-        <label htmlFor="companyInput" />
-        <input
-          id="companyInput"
-          className="firstCol firstRow"
-          placeholder="Company Name"
-        />
+    <div className="infoFields">
+      <input
+        // id="companyInput"
+        className="firstCol firstRow"
+        placeholder="Company Name"
+        value={props.experienceInfo.company}
+        onChange={props.companyHandler}
+      />
 
-        <label htmlFor="positionInput" />
-        <input
-          id="positonInput"
-          className="secondCol firstRow"
-          placeholder="Position"
-        />
+      <input
+        // id="positonInput"
+        className="secondCol firstRow"
+        placeholder="Position"
+        value={props.experienceInfo.position}
+        onChange={props.positionHandler}
+      />
 
-        <label htmlFor="expStartDate" />
-        <input
-          id="expStartDate"
-          className="firstCol secondRow"
-          placeholder="Start Date"
-        />
+      <input
+        // id="expStartDate"
+        className="firstCol secondRow"
+        placeholder="Start Date"
+        value={props.experienceInfo.startDate}
+        onChange={props.expStartHandler}
+      />
 
-        <label htmlFor="expEndDate" />
-        <input
-          id="expEndDate"
-          className="secondCol secondRow"
-          placeholder="End Date"
-        />
+      <input
+        // id="expEndDate"
+        className="secondCol secondRow"
+        placeholder="End Date"
+        value={props.experienceInfo.endDate}
+        onChange={props.expEndHandler}
+      />
 
-        <label htmlFor="jobDescription" />
-        <textarea
-          id="jobDescription"
-          className="bothCol thirdRow"
-          placeholder="Job Description"
-        />
-      </div>
-      <div className="formButtons">
-        <button className="add">Add Experience</button>
-        <button className="delete">Delete</button>
-      </div>
-    </section>
+      <textarea
+        // id="jobDescription"
+        className="bothCol thirdRow"
+        placeholder="Job Description"
+        value={props.experienceInfo.description}
+        onChange={props.expDescriptionHandler}
+      />
+    </div>
   );
 }
 
