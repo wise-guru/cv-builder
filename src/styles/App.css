@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #7f98bb;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+}
+
+header {
+    background-color: #2563eb;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.mainContainer {
+    display: grid;
+    justify-content: center;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.cvForms {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.build.form, .preview.form {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.infoFields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+
+}
+
+.infoFields input {
+    width: 12rem;
+}
+
+.firstCol {
+    grid-column: 1 / 2;
+}
+
+.secondCol {
+    grid-column: 2 / 3;
+}
+
+.firstRow {
+    grid-row: 1;
+    
+}
+
+.secondRow {
+    grid-row: 2;
+}
+
+.thirdRow {
+    grid-row: 3;
+}
+
+.fourthRow {
+    grid-row: 4;
+}
+
+.fifthRow {
+    grid-row: 5;
+}
+
+
+.bothCol {
+    grid-column: 1 / 3;
+}
+
+/*For preview form */
+
+.personalInfo .preview {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    border-bottom: solid 1px black;
+}
+
+.name {
+    font-size: 2rem;
+    grid-column: 1;
+}
+
+li {
+    list-style-type: none;
+}
+
+.header.right {
+    display: grid;
+    grid-column: 2;
+}
+
+.header li {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+.experience {
+    display: grid;
+}
+
+.line {
+    display: grid;
+    
+}
+
