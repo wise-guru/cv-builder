@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import uniqid from 'uniqid';
-import SkillOverview from '../SkillOverview';
+import React from 'react';
 
 function Skills(props) {
   return (
@@ -8,7 +6,8 @@ function Skills(props) {
       <h2>Skills</h2>
       <input
         type="text"
-        id="skillsInput"
+        className="skillsInput"
+        placeholder="Skill"
         value={props.skillInfo.skill}
         onChange={props.skillHandler}
       />
