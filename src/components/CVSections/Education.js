@@ -3,42 +3,44 @@ import React from 'react';
 function Education(props) {
   return (
     <section className="education">
-      <h2>Education</h2>
       <div className="infoFields">
-        <label htmlFor="programInput" />
         <input
           type="text"
-          id="programInput"
+          // id="programInput"
           className="firstCol firstRow"
           placeholder="Degree or Program Name"
+          value={props.educationInfo.institution}
+          onChange={props.institutionHandler}
         />
 
-        <label htmlFor="institutionInput" />
         <input
           type="text"
-          id="institutionInput"
+          // id="institutionInput"
           className="secondCol firstRow"
           placeholder="Institution Name"
+          value={props.educationInfo.degree}
+          onChange={props.degreeHandler}
         />
 
-        <label htmlFor="eduStartDate" />
         <input
           type="text"
-          id="eduStartDate"
+          // id="eduStartDate"
           className="firstCol secondRow"
           placeholder="Start Date"
+          value={props.educationInfo.startDate}
+          onChange={props.eduStartHandler}
         />
 
-        <label htmlFor="eduEndDate" />
         <input
           type="text"
-          id="eduEndDate"
+          // id="eduEndDate"
           className="secondCol secondRow"
           placeholder="End Date"
+          value={props.educationInfo.endDate}
+          onChange={props.eduEndHandler}
         />
       </div>
       <div className="formButtons">
-        <button className="add">Add Education</button>
         <button className="delete">Delete</button>
       </div>
     </section>
