@@ -12,7 +12,7 @@ class BuildForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="buildForm">
         <PersonalInfo
           personalInfo={this.props.personalInfo}
           firstNameHandler={e => {
@@ -21,46 +21,30 @@ class BuildForm extends Component {
           lastNameHandler={e => {
             this.props.lastNameHandler(e);
           }}
+          professionalTitleHandler={e => {
+            this.props.professionalTitleHandler(e);
+          }}
+          githubHandler={e => {
+            this.props.githubHandler(e);
+          }}
           phoneHandler={e => {
             this.props.phoneHandler(e);
           }}
           emailHandler={e => {
             this.props.emailHandler(e);
           }}
-          linkedInHandler={e => {
-            this.props.linkedInHandler(e);
-          }}
-          twitterHandler={e => {
-            this.props.twitterHandler(e);
-          }}
+          // linkedInHandler={e => {
+          //   this.props.linkedInHandler(e);
+          // }}
+          // twitterHandler={e => {
+          //   this.props.twitterHandler(e);
+          // }}
           descriptionHandler={e => {
             this.props.descriptionHandler(e);
           }}
         />
-        <h2>Education Details</h2>
-        {this.props.educationInfo.map(education => {
-          const { id } = education;
-          return (
-            <Education
-              key={id}
-              educationInfo={education}
-              institutionHandler={e => {
-                this.props.institutionHandler(e, id);
-              }}
-              degreeHandler={e => {
-                this.props.degreeHandler(e, id);
-              }}
-              eduStartHandler={e => {
-                this.props.eduStartHandler(e, id);
-              }}
-              eduEndHandler={e => {
-                this.props.eduEndHandler(e, id);
-              }}
-            />
-          );
-        })}
-        <button onClick={this.props.educationHandler}>New Education+</button>
-        <h2>Work Experience</h2>
+
+        <h2>Experience</h2>
         {this.props.experienceInfo.map(work => {
           const { id } = work;
           return (
@@ -86,6 +70,31 @@ class BuildForm extends Component {
           );
         })}
         <button onClick={this.props.workHandler}>New Experience+</button>
+
+        <h2>Education</h2>
+        {this.props.educationInfo.map(education => {
+          const { id } = education;
+          return (
+            <Education
+              key={id}
+              educationInfo={education}
+              institutionHandler={e => {
+                this.props.institutionHandler(e, id);
+              }}
+              degreeHandler={e => {
+                this.props.degreeHandler(e, id);
+              }}
+              eduStartHandler={e => {
+                this.props.eduStartHandler(e, id);
+              }}
+              eduEndHandler={e => {
+                this.props.eduEndHandler(e, id);
+              }}
+            />
+          );
+        })}
+        <button onClick={this.props.educationHandler}>New Education+</button>
+
         <h2>Skills</h2>
         {this.props.skillInfo.map(skill => {
           const { id } = skill;
