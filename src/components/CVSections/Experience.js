@@ -44,6 +44,7 @@ function Experience(props) {
           value={props.experienceInfo.description}
           onChange={props.expDescriptionHandler}
           rows={4}
+          maxLength={300}
         />
       </div>
     </section>
