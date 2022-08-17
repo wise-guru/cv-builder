@@ -74,6 +74,9 @@ function PersonalInfo(props) {
           className="bothCol fourthRow"
           value={props.personalInfo.description}
           onChange={props.descriptionHandler}
+          cols="2"
+          rows={6}
+          maxLength={300}
         />
       </div>
     </section>
