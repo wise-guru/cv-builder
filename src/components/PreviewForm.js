@@ -12,7 +12,7 @@ class PreviewForm extends Component {
   render() {
     return (
       <div className="previewForm">
-        <section className="personalInfo">
+        <section className="personalInfo previewSection">
           <div className="preview header">
             <div className="header left">
               <h1 className="name">
@@ -40,21 +40,27 @@ class PreviewForm extends Component {
               </li>
             </ul>
           </div>
-          <div>{this.props.personalInfo.description}</div>
+          <div className="personalDescription">
+            {this.props.personalInfo.description}
+          </div>
         </section>
 
-        <section className="experiencePreview">
+        <section className="experiencePreview previewSection">
           <h3>Work experience</h3>
           <ul>
             {this.props.experienceInfo.map(experience => {
               const { id } = experience;
               return (
                 <li key={id} className="experience">
-                  <div className="line">
+                  <div className="firstLine">
                     <div>{experience.position}</div>
-                    <div>{experience.company}</div>
-                    <div>{experience.startDate} </div>
-                    <div>{experience.endDate}</div>
+                    <div className="right">
+                      <div className="company">{experience.company}</div>
+                      <div>|</div>
+                      <div className="bold">{experience.startDate} </div>
+                      <div>-</div>
+                      <div className="bold">{experience.endDate}</div>
+                    </div>
                   </div>
                   <div className="expDescription">{experience.description}</div>
                 </li>
@@ -63,27 +69,31 @@ class PreviewForm extends Component {
           </ul>
         </section>
 
-        <section className="EducationPreview">
+        <section className="EducationPreview previewSection">
           <h3>Education</h3>
           {this.props.educationInfo.map(education => {
             const { id } = education;
             return (
-              <li key={id}>
-                <div>{education.institution}</div>
+              <li key={id} className="firstLine">
                 <div>{education.degree}</div>
-                <div>{education.startDate}</div>
-                <div>{education.endDate}</div>
+                <div className="right">
+                  <div className="institution">{education.institution}</div>
+                  <div>|</div>
+                  <div className="bold">{education.startDate}</div>
+                  <div>-</div>
+                  <div className="bold">{education.endDate}</div>
+                </div>
               </li>
             );
           })}
         </section>
 
-        <section className="skillsPreview">
+        <section className="skillsPreview previewSection">
           <h3>Skills</h3>
           {this.props.skillInfo.map(skill => {
             const { id } = skill;
             return (
-              <li key={id}>
+              <li key={id} className="skills">
                 <div>{skill.skill}</div>
               </li>
             );
