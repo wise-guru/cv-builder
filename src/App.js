@@ -9,6 +9,10 @@ class App extends Component {
     this.state = {};
   }
 
+  componentDidMount() {
+    document.title = 'CV Builder';
+  }
+
   render() {
     return (
       <div className="container">
